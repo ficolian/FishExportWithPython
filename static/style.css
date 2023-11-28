@@ -44,7 +44,7 @@ body{
     justify-content: space-between;
 }
 
-.div-space-evennly {
+.div-space-evenly {
     display: flex;
     justify-content: space-evenly;
 }

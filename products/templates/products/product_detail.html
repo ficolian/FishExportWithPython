@@ -1,8 +1,11 @@
 {%extends 'base.html' %}
 {% block content %}
+
 <h1>{{ object.title}}</h1>
 <p>{{ object.description}}</p>
+<p>{{ object.email}}</p>
 <p>{{ object.price}}</p>
+
 <button onclick="location.href = '/products/'">Back</button>
 
 {% endblock %}

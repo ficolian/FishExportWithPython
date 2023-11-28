@@ -3,7 +3,7 @@ from django import forms
 from .models import Product 
 
 class ProductForm(forms.ModelForm):
-    title = forms.CharField(label ='', widget = forms.TextInput(attrs ={"Placeholder" : "Your Title"} ))
+    title = forms.CharField(widget = forms.TextInput(attrs ={"Placeholder" : "Your Title"} ))
     email = forms.EmailField()
     description = forms.CharField(
                         required = False,
@@ -12,8 +12,8 @@ class ProductForm(forms.ModelForm):
                                     "placeholder": "Your description",
                                     "class": "new-class-name two",
                                     "id": "my-id-for-textarea",
-                                    "rows": 20,
-                                    'cols': 120
+                                    "rows": 1,
+                                    'cols': 30
                                 }
                             )
                         )
@@ -51,7 +51,7 @@ class RawProductForm(forms.Form):
                                     "class": "new-class-name two",
                                     "id": "my-id-for-textarea",
                                     "rows": 20,
-                                    'cols': 120
+                                    'cols': 10
                                 }
                             )
                         )
