@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home - Export Ikan</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Library StyleSheet -->
+    <link href="lib/animate/animate.css" rel="stylesheet">
+    <!-- Template Stylesheet -->
+    <link href="../static/style.css" rel="stylesheet">
+    <!-- Template Stylesheet -->
+    <link href="../static/bootstrap.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- nav start -->
+    <nav class="div-space-between pe-5 border-top shadow border-primary">
+        <div class="bg-blue ">
+            <a href="index.html" class="nav-link text-white fs-2 fw-1 pt-3 px-5"> EXPORT </a>
+        </div>
+        <div class="">
+            <div class="div-space-around py-3" id="">
+                <div class="div-space-around">
+                    <a href="index.html" class="nav-link">HOME</a>
+                    <a href="testimonial.html" class="nav-link">TESTIMONIAL</a>
+                    <a href="contact.html" class="nav-link">CONTACT</a>
+                </div>
+                <i class="fab fa-whatsapp nav-link ft-green fs-1"></i>
+                <a href="https://wa.me/6285368257575?text=Isi Pesan" class ="nav-link dark">+62 852-8198-5995</a>
+            </div>
+        </div>
+    </nav>
+    <!-- nav end -->
+    <div class="div-space-around">
+        <div class="position-relative">
+            <img class="img-fluid" src="../static/img/carousel-2.jpg" alt="test">
+            <div class="position-absolute bg-brown">
+                <div class="container">
+                    <h5 class="ft-white pt-6 px-5 animated slideInDown">FRESH FROM THE OCEAN</h5>
+                    <h3 class="ft-white px-5 animated slideInDown">#1 Place For Your <span class="ft-blue">Premium Fish</span> Choice</h1>
+                    <p class="ft-white pb-1 px-5 animated slideInDown">Discover Our Wide Selection of Premium Fish Supply - Order Now !</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="div-space-between pt-5">
+        <img class="img-item" style="width:700px;height:500px;" src="../static/img/carousel-2.jpg" alt="Carp">
+        <div class="px-5">
+            <h1 class="ft-blue">ABOUT US</h1>
+        <h4>PT SARI IKAN</h4>
+        <p>
+            Welcome to PT SARI IKAN, your go-to source for premium seafood products from Indonesia. With our best experience in the industry, we pride ourselves on providing our customers with the highest quality and freshest seafood available.
+        </p>
+        </div>
+    </div>
+    <div class="text-center py-5">
+        <h1 class="ft-blue">PRODUCTS</h1>
+        <h4>Catalog</h4>
+    </div>
+    <!-- pricing start -->
+    <div class="mini py-3"></div>
+    <!-- pricing end -->
+    <!-- Footer Start -->
+    <div class="div-space-between py-4 bg-brown">
+        <div class="container py-5 text-white ">
+            <div>
+                <div>
+                    <h4 class="text-white mb-4">Address</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Muara Karang Raya 123</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>yansencokroyolis@gmail.com</p>
+                    <div class="pt-2">
+                        <a class="text-white me-1" href=""><i class="fab fa-whatsapp"></i></a>
+                        <a class="text-white me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="text-white me-1" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="text-white me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer end -->
+    
+
+</body>
+<script type="text/javascript"> 
+    var miniClass = document.querySelector('.mini');
+    var fishName = ['NILA', 'KERAPU', 'GURAME', 'BAWAL PUTIH']
+    
+    function showImages() {
+        for(let i = 0; i < 4; i+=2){
+            miniClass.innerHTML += 
+            `<div class="div-center pt-4">
+                <div class="div-space-around item-card">
+                    <img class="img-item" src="/static/img/fish-${[i]}.jpg" alt = "fish-${[i]}"">
+                    <div class="item-card-detail ft-white">
+                        <h2 class="text-center py-4" >${fishName[i]}</h2>
+                        <h1 class="px-4">Type : Wholefish</h1s>
+                        <h1 class="px-4 pb-4">Size : S | M | L</h1>
+                        <div class="text-center">
+                            <a href="https://wa.me/6285368257575?text=Isi Pesan"  class="px-4 py-2 btn">Pesan</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="div-space-around item-card">
+                    <img class="img-item" src="/static/img/fish-${[i+1]}.jpg" alt = "fish-${[i+1]}">
+                    <div class="item-card-detail ft-white">
+                        <h2 class="text-center py-4" >${fishName[i+1]}</h2>
+                        <h1 class="px-4">Type : Wholefish</h1s>
+                        <h1 class="px-4 pb-4">Size : S | M | L</h1>
+                        <div class="text-center">
+                            <a href="https://wa.me/6285368257575?text=Isi Pesan"  class="px-4 py-2 btn">Pesan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            `
+        }
+    }
+    showImages();
+</script>
+</html>

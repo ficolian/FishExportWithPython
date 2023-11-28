@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home - Export Ikan</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Template Stylesheet -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- nav start -->
+    <nav class="div-space-between pe-5 border-top shadow border-primary">
+        <div class="bg-blue ">
+            <a href="index.html" class="nav-link text-white fs-2 fw-1 pt-3 px-5"> EXPORT </a>
+        </div>
+        <div class="">
+            <div class="div-space-around py-3" id="">
+                <div class="div-space-around">
+                    <a href="index.html" class="nav-link">HOME</a>
+                    <a href="testimonial.html" class="nav-link">TESTIMONIAL</a>
+                    <a href="contact.html" class="nav-link">CONTACT</a>
+                </div>
+                <i class="fab fa-whatsapp nav-link ft-green fs-1"></i>
+                <a href="https://wa.me/6285368257575?text=Isi Pesan" class ="nav-link dark">+62 852-8198-5995</a>
+            </div>
+        </div>
+    </nav>
+    <!-- nav end -->
+    <div class="div-space-around">
+        <div class="position-relative">
+            <img class="img-fluid" src="img/carousel-2.jpg" alt="" style="height:300px">
+            <div class="position-absolute bg-brown">
+                <div class="container">
+                    <h1 class="ft-white pt-6 px-5">TESTIMONIAL</h1>
+                    <h3 class="ft-white px-5">Our Clients Say <span class="ft-blue">!</span></h1>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="text-center py-5">
+        <h1 class="ft-blue">TESTIMONIAL</h1>
+        <h4>CLIENTS TESTIMONIAL</h4>
+    </div>
+    <!-- pricing start -->
+    <div class="mini py-3"></div>
+    
+    <!-- Footer Start -->
+    <div class="div-space-between py-4 bg-brown">
+        <div class="container py-5 text-white ">
+            <div>
+                <div>
+                    <h4 class="text-white mb-4">Address</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Muara Karang Raya 123</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>yansencokroyolis@gmail.com</p>
+                    <div class="pt-2">
+                        <a class="text-white me-1" href=""><i class="fab fa-whatsapp"></i></a>
+                        <a class="text-white me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="text-white me-1" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="text-white me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer end -->
+    
+
+</body>
+<script type="text/javascript"> 
+    var miniClass = document.querySelector('.mini');
+    var fishName = ['MANDY', 'CHERINE', 'JACK', 'DAN']
+    
+    function showImages() {
+        for(let i = 0; i < 4; i++){
+            miniClass.innerHTML += 
+            `<div class="div-center py-3">
+                    <div class="testimonial-card-detail">
+                        <h2 class="text-center py-3 ft-blue" >${fishName[i]}</h2>
+                        <h1 class="">Barang diterima dengan baik</h1s>
+                        <h1 class="py-3"><i class="fa fa-star ft-yellow"></i></h1>
+                        <img class="img-testimonial px-5" src="img/testimonial-${[i]}.jpg" alt = "testimonial-${[i]}"">
+                    </div>
+                
+            </div>
+            `
+        }
+    }
+    showImages();
+</script>
+</html>

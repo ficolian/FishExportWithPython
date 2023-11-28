@@ -1,0 +1,154 @@
+/********** Template CSS **********/
+:root {
+    --primary: #04aab6;
+    --secondary: #51CFED;
+    --light: #F8F2F0;
+    --dark: #060315;
+}
+a{
+    padding: auto;
+    text-decoration: none;
+}
+body{
+    font-family: "Inter",sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin:0;
+    background-color: #f6fdff;
+}
+
+.div-center {
+    display: flex;
+    justify-content: center;
+}
+.div-space-around {
+    display: flex;
+    justify-content: space-around;
+}
+.div-flex-start {
+    padding-left: 50px;
+    display: flex;
+    justify-content: flex-start;
+}
+.div-flex-end {
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.div-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.div-space-evennly {
+    display: flex;
+    justify-content: space-evenly;
+}
+.nav-link:hover,.nav-link:focus{color:#8f7d4d}
+.nav-link.disabled{color:#6c757d;pointer-events:none;cursor:default}
+.nav-link {
+    display: block;
+    padding: 0.5rem 1.5rem;
+    color: var(--primary);
+    transition: color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
+.nav-link-icon{
+    display: block;
+    padding: 0.5rem 0.5rem;
+    font-size: 1.5rem;
+    color: var(--primary);
+    transition: color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
+.dark{
+    font-weight: 700; 
+}
+h1{
+    margin: 0rem;
+    font-size: 1rem;
+}
+h2{
+    margin: 0rem;
+    font-size: 2rem;
+}
+h3{
+    font-size: 3rem;
+    margin: 0rem;
+}
+h4{
+    margin: 0rem;
+    font-size: 4rem;
+}
+h5{
+    font-size: 5rem;
+    margin: 0rem;
+}
+.img-fluid{
+    width:1519.2px;
+    height:606.4px;
+}
+.img-item{
+    width:300px;
+    height:200px;
+}
+.img-testimonial{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+}
+.text-center{
+    text-align: center;
+}
+.item-card{
+    align-items: center;
+    margin-right:15px;
+    width: 600px;
+    height: 260px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15) !important;
+}
+.item-card-detail{
+    width: 250px;
+    height: 220px;
+    border-radius: 15px;
+    background-color: rgb(172, 238, 255);
+    background-image: linear-gradient(190deg, #17a2f3 0%, #75afdf 100%);
+}
+.testimonial-card-detail{
+    text-align: center;
+    width: 250px;
+    height: 300px;
+    border-radius: 15px;
+    background-color: rgb(172, 238, 255);
+    background-image: linear-gradient(190deg, #fafcfd 0%, #dbefff 100%);
+}
+.btn{
+    font-family: "Poppins", Sans-serif;
+    font-size: large;
+    fill: #288be7;
+    color: #1dd2d8;
+    background-color: #FFFFFF;
+    border-radius: 20px 20px 20px 20px;
+    width: 200px;
+}
+.btn-primary{
+    font-family: "Poppins", Sans-serif;
+    font-size: large;
+    background-color: #75afdf;
+    color: #ffffff;
+    width: 200px;
+    padding: 10px;
+}
+
+.animated-up{
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
