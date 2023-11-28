@@ -12,3 +12,10 @@ python manage.py startapp pages
 
 --runserver
 python manage.py runserver
+
+git init 
+
+git remote add origin https://github.com/ficolian/FishExportWithPython.git
+
+git push -f origin main
+
