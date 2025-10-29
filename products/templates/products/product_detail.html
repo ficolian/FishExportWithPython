@@ -1,11 +1,63 @@
-{%extends 'base.html' %}
+{% extends 'base.html' %}
 {% block content %}
 
-<h1>{{ object.title}}</h1>
-<p>{{ object.description}}</p>
-<p>{{ object.email}}</p>
-<p>{{ object.price}}</p>
+<div class=" bg-gray-50 flex items-center justify-center py-3">
+  <div class="max-w-4xl w-full bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100">
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-sky-500 to-teal-400 p-6 flex items-center space-x-3">
+      <div>
+        <h1 class="text-lg font-bold text-white flex items-center gap-3">      
+            <i class="fa fa-user text-white"></i>
+            User Detail</h1>
+        <p class="text-sm text-sky-100 mt-1">User Details Overview</p>
+      </div>
+    </div>
 
-<button onclick="location.href = '/products/'">Back</button>
+    <!-- Content -->
+    <div class="p-6 space-y-4">
+        <div class="grid grid-cols-2 gap-4">
+            <div class="flex items-start space-x-3">
+                <i class="fa fa-align-left text-sky-300 text-lg mt-1"></i>
+                <div>
+                <h2 class="text-gray-400 text-sm uppercase font-semibold">Username</h2>
+                <p class="text-gray-600 mt-1 leading-relaxed font-light">{{ object.username|default:"No title provided." }}</p>
+                </div>
+            </div>
+
+            <div class="flex items-start space-x-3">
+                <i class="fa fa-book text-sky-300 text-lg mt-1"></i>
+                <div>
+                <h2 class="text-gray-400 text-sm uppercase font-semibold">description</h2>
+                <p class="text-gray-500 font-medium mt-1">{{ object.description|default:"-" }}</p>
+                </div>
+            </div>
+        </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="bg-gray-50 rounded-xl p-4 border border-gray-100">
+          <h3 class="text-gray-500 text-sm font-semibold">Email</h3>
+          <p class="text-gray-900 font-medium mt-1">{{ object.email|default:"-" }}</p>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-4 border border-gray-100">
+          <h3 class="text-gray-500 text-sm font-semibold">Price</h3>
+          <p class="text-gray-900 font-medium mt-1">${{ object.price|floatformat:2 }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="flex justify-between items-center px-6 py-4 border-t border-gray-100 bg-gray-50">
+      <button onclick="location.href='/products/'"
+        class="inline-flex items-center bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-lg transition">
+        ← Back
+      </button>
+
+      <a href="/products/{{ object.id }}/update/"
+        class="inline-flex items-center bg-sky-500 hover:bg-sky-600 text-white font-medium p-2 rounded-lg transition gap-2">
+        <i class="fa fa-pencil-alt text-white text-sm"></i>Edit
+      </a>
+    </div>
+  </div>
+</div>
 
 {% endblock %}

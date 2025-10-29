@@ -1,3 +1,7 @@
+python -m venv venv
+venv\Scripts\activate
+pip install django
+
 -- make migration
 python manage.py makemigrations
 

@@ -1,32 +1,30 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .forms import ProductForm
 from .models import Product
+from django.core.paginator import Paginator
 
 def product_list_view(request):
-    queryset = Product.objects.all()
+    products = Product.objects.all().order_by('id')
+    paginator = Paginator(products, 5)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
     context = {
-        "object_list" : queryset
+        'page_obj': page_obj,
+        'object_list': page_obj.object_list,
+        'total_count': products.count(),
     }
-    # form = ProductForm(request.POST or None)
-    # print (form.errors)
-    # if form.is_valid():
-    #     form.save()
-    #     form = ProductForm()
     return render(request, "products/product_list.html", context)
 
 def product_create_view(request):
     form = ProductForm(request.POST or None)
-    print (form.errors)
     if form.is_valid():
         form.save()
-        form = ProductForm()
+        return redirect('/products/')
+
     context = {
         'form': form
     }
-    # if (request.POST):
-    #     print('go to list')
-    #     product_list_view(request)
-    # else:
     return render(request, "products/product_create.html", context)
 
 def dynamic_look_up(request, id):
@@ -43,7 +41,7 @@ def dynamic_look_up(request, id):
 
 def render_initial_data(request):
     initial_data = {
-        'title':"My good",
+        'username':"My good",
         'description' :"this"
     }
     obj = Product.objects.get(id=1)
@@ -58,6 +56,7 @@ def product_update_view(request, id=id):
     form = ProductForm(request.POST or None, instance=obj)
     if form.is_valid():
         form.save()
+        return redirect('/products/')
     context = {
         'form': form
     }

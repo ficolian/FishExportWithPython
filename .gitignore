@@ -1,3 +1,55 @@
-db.sqlite3
+# Python bytecode
+*.pyc
+*.pyo
+__pycache__/
 
-products/__pycache__/
+# Environment
+.env
+venv/
+ENV/
+env/
+.venv/
+
+# Django
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+*.log
+
+# VSCode / IDEs
+.vscode/
+.idea/
+
+# PyCharm
+*.iml
+*.ipr
+*.iws
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+htmlcov/
+.coverage
+
+# Migrations (optional: include if you want to track migrations)
+# */migrations/*.py
+# !*/migrations/__init__.py
+
+# Django secret key file (if you store separately)
+settings_local.py
+
+# Testing / Build
+.pytest_cache/
+__pycache__/
+*.egg-info/
+dist/
+build/
+
+# VS Workspace and Copilot files
+.vs/
+*.db
+*.wsuo
+*.json
