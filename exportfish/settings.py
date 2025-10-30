@@ -27,6 +27,12 @@ SECRET_KEY = 'j+tc8gl%#37i2-^=zc@0hg493$vt*qfm%-tm1n*t-twa(!qyj('
 DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'fishexportwithpython-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = [
+    'https://fishexportwithpython-production.up.railway.app',
+    'http://localhost',
+    'http://127.0.0.1'
+]
+
 STATIC_ROOT = BASE_DIR/'staticfiles'
 
 STATICFILES_DIRS =(
